@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+{% load static%}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}"> 
+
+    <h1>DASHBOARD</h1>
+
+    <a href="{% url 'about' %}">about</a>
+    <a href="{% url 'product' %}">Products</a>
+
+
+
+    {% for ele in users %}
+
+    <h1>{{ele.name}}</h1>
+
+    {% endfor %}
+    {% comment %} ele in users    ele.name {% endcomment %}
+    <h1>{{user|capfirst|add:" is instructor in DOTA"}}</h1>
+    <h1>{{age}}</h1>
+    <h1>{{test|default:"Variable not found"}}</h1>
+    <h1>{{URL}}</h1>
+    
+
+{% endblock %}
+

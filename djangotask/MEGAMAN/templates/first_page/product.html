@@ -1,0 +1,39 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<style>
+table,
+tr,
+td {
+    border: 2px solid green
+}
+</style>
+
+<h1>Products</h1>
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Model</th>
+    <th>Image</th>
+</tr>
+
+
+{% for ele in products %}
+<tr>
+    <td>{{ele}}</td>
+    <td>{{ele.price}}</td>
+    <td>{{ele.model}}</td>
+    <td>{{ele.image}}</td>
+    <td> <img src= "{{ele.image}}" alt="image"/> </td>
+
+    {% comment %} <td><img src="/{{ BASIC_DIR }}/{{img.img}}" width="120"/></td> {% endcomment %}
+
+</tr>
+    {% endfor %}
+</table>
+
+<a href="{% url 'dashboard' %}">DASHBOARD</a>
+
+{% endblock %} 
+
