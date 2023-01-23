@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/media/mmamdouh/Back Up/iti/Python/Day4/Django/Self_Study/djangotask/bin/python" "$0" "$@"
-' '''
+#!/media/mmamdouh/new-Partation/iti-newpart/Python/Day4/Django/Self_Study/Django_Task/djangotask/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

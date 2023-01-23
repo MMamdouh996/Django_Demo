@@ -25,14 +25,20 @@ td {
     <td>{{ele.price}}</td>
     <td>{{ele.model}}</td>
     <td>{{ele.image}}</td>
-    <td> <img src= "{{ele.image}}" alt="image"/> </td>
-
+    <td>{% if ele.image %} <img src= '{{ele.image.url}}' alt="image" width="120" height="120"/>
     {% comment %} <td><img src="/{{ BASIC_DIR }}/{{img.img}}" width="120"/></td> {% endcomment %}
-
+    {% endif %}
+</td>
+<td><button><a href="{% url 'deleteCar' ele.id %}">delete</a></button> </td>
+<td><button><a href="{% url 'viewcar' ele.id %}">  View  </a></button></td>
+<td><button><a href="{% url 'editCar' ele.id %}">  Update  </a></button></td>
 </tr>
     {% endfor %}
 </table>
-
+<br>
+<td><button><a href="{% url 'createCar' %}">Insert New Car</a></button></td>
+<br>
+<br>
 <a href="{% url 'dashboard' %}">DASHBOARD</a>
 
 {% endblock %} 

@@ -10,7 +10,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV '/media/mmamdouh/Back Up/iti/Python/Day4/Django/Self_Study/djangotask'
+setenv VIRTUAL_ENV '/media/mmamdouh/new-Partation/iti-newpart/Python/Day4/Django/Self_Study/Django_Task/djangotask'
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"
